@@ -1,4 +1,7 @@
-#include "stm32f4xx.h" //contains definitions for all peripherals, registers, and other hardware-related constants.
+#include "stm32f4xx.h" 
+//contains definitions for all peripherals, registers, and other hardware-related constants.
+//Uncomment the target board from stm32f4xx.h file
+
 #include "FreeRTOS.h"
 #include "task.h"
 #include "stdio.h"
