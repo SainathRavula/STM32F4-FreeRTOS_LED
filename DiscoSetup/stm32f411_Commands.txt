@@ -8,8 +8,8 @@ st-flash reset
 st-flash erase
 
 -->Debugging
-st-util after finishing  press ctrl+c
+st-util
 arm-none-eabi-gdb binary/FreeRTOS.elf -->execute in new terminal window
 tar ext :4242
 sudo lsof -i: 4242 --> gives pid of st-util
-kill "pid"  (or) execute jobs and use sudo kill "job.no(without%)"
+kill "pid"

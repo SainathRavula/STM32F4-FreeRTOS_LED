@@ -1,7 +1,7 @@
 -->Refering these links
 https://github.com/wangyeee/STM32F4-FreeRTOS
 https://github.com/stlink-org/stlink?tab=readme-ov-file
-
+https://github.com/espruino/Espruino/blob/master/targetlibs/stm32f4/lib/stm32f411xe.h (For driver and header files of stm32f4)
 blue board-->stm32f411e (MB1115D)
 green board-->stm32f411e (Mb1115B)
 ================================================================================================
@@ -39,6 +39,11 @@ arm-none-eabi-gdb: error while loading shared libraries: libtinfo.so.5: cannot o
 vlab@HYVLAB1:/opt/gcc-arm$ dpkg -l | grep libtinfo
 ii  libtinfo6:amd64                            6.2-0ubuntu2.1                      amd64        shared low-level terminfo library for terminal handling
 vlab@HYVLAB1:/opt/gcc-arm$ sudo ln -s /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5
+
+*This command creates a symbolic link (ln -s) in the /lib/x86_64-linux-gnu/ directory. The link is named libtinfo.so.5 and points to the file /lib/x86_64-linux-gnu/libtinfo.so.6.
+
+*Symbolic links allow multiple filenames to refer to the same file or directory. In this case, it appears to be an attempt to make a library file (libtinfo.so.5) point to another version (libtinfo.so.6). This is often done to resolve compatibility issues or to satisfy dependencies required by certain applications.
+
 *
 vlab@HYVLAB1:/opt/gcc-arm$ arm-none-eabi-gdb --version
 GNU gdb (GNU Arm Embedded Toolchain 10.3-2021.10) 10.2.90.20210621-git
