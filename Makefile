@@ -38,7 +38,8 @@ vpath  %.c $(FREERTOS)/portable/GCC/ARM_CM4F
 vpath  %.s $(STARTUP)
 
 #In this makefile, the vpath directive is used to specify additional directories where the make utility should search for source files. 
-#However, the vpath variable itself is not printed directly because it's a special variable in makefiles that holds the search paths but isn't directly accessible for printing like regular variables.
+#However, the vpath variable itself is not printed directly because it's a special variable in makefiles that holds the search paths 
+#but isn't directly accessible for printing like regular variables.
 
 ASRC		= startup_stm32f4xx.s   
 
