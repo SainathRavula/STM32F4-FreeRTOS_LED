@@ -37,7 +37,8 @@ vpath  %.c $(FREERTOS)/portable/MemMang
 vpath  %.c $(FREERTOS)/portable/GCC/ARM_CM4F
 vpath  %.s $(STARTUP)
 
-#In this makefile, the vpath directive is used to specify additional directories where the make utility should search for source files. However, the vpath variable itself is not printed directly because it's a special variable in makefiles that holds the search paths but isn't directly accessible for printing like regular variables.
+#In this makefile, the vpath directive is used to specify additional directories where the make utility should search for source files. 
+#However, the vpath variable itself is not printed directly because it's a special variable in makefiles that holds the search paths but isn't directly accessible for printing like regular variables.
 
 ASRC		= startup_stm32f4xx.s   
 
@@ -155,16 +156,20 @@ LDFLAGS 	+= -Wl,-Map=$(BIN_DIR)/$(TARGET).map
 
 
 CC		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-gcc
-#Compiler Command s responsible for compiling C source files (*.c) into object files (*.o). It translates C code into machine code specific to the target architecture.
+#Compiler Command s responsible for compiling C source files (*.c) into object files (*.o). 
+#It translates C code into machine code specific to the target architecture.
 
 LD		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-ld
-#Linker Command links together multiple object files and libraries to create the final executable file. It resolves symbols and addresses, organizes memory layout, and generates the executable binary.
+#Linker Command links together multiple object files and libraries to create the final executable file.
+#It resolves symbols and addresses, organizes memory layout, and generates the executable binary.
 
 OBJCOPY 	 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-objcopy
-#Object File Copy Command copies object files and can be used to convert the format of object files. For example, it can convert object files into binary, Intel Hex, or ELF format.
+#Object File Copy Command copies object files and can be used to convert the format of object files. 
+#For example, it can convert object files into binary, Intel Hex, or ELF format.
 
 AS 		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-as
-#The assembler command translates assembly source files (*.s) into object files (*.o). It converts human-readable assembly language code into machine code instructions.
+#The assembler command translates assembly source files (*.s) into object files (*.o). 
+#It converts human-readable assembly language code into machine code instructions.
 
 AR		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-ar
 #Archiver Command creates static libraries (archives) containing multiple object files. It's often used to bundle related object files together for easier linking.
@@ -175,7 +180,8 @@ GDB  		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-gdb
 
 OBJ 		 = $(SRC:%.c=$(BUILD_DIR)/%.o)
 ASM_OBJ	 = $(ASRC:%.s=$(BUILD_DIR)/%.o)
-#$(ASRC:%.s=$(BUILD_DIR)/%.o): This is a pattern substitution This syntax substitutes each filename in the variable $(ASRC) with a corresponding output filename in the build directory ($(BUILD_DIR)), replacing the .s extension with .o.
+#$(ASRC:%.s=$(BUILD_DIR)/%.o): This is a pattern substitution This syntax substitutes each filename in the variable $(ASRC) 
+#with a corresponding output filename in the build directory ($(BUILD_DIR)), replacing the .s extension with .o.
 
 
 #$< :- name of dependency; $@ :- name of target 
