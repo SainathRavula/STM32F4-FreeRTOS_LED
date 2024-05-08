@@ -5,11 +5,15 @@
 #include "stm32f4xx_gpio.h" // Include GPIO library
 
 #define CCM_RAM __attribute__((section(".ccmram")))
-// Macro to use CCM (Core Coupled Memory) in STM32F4
-// Defines a macro to place specific variables and functions in the Core Coupled Memory (CCM) of the STM32F4 microcontroller.
-// __attribute__((section(".ccmram"))): This is an attribute specifier provided by GCC. Used to specify that the variable or function declared with this attribute should be placed in a specific section of memory during the linking process.
-// It is a special type of memory;CCM is designed to provide fast, low-latency access to memory for critical system tasks, particularly those related to real-time processing.
-// Other memory regions:- Flash memory, RAM, External Memory Interfaces(EMI), Pheripheral Memory regions
+/* 
+* Macro to use CCM (Core Coupled Memory) in STM32F4
+* Defines a macro to place specific variables and functions in the Core Coupled Memory (CCM) of the STM32F4 microcontroller.
+* __attribute__((section(".ccmram"))): This is an attribute specifier provided by GCC. Used to specify that the variable or function
+ declared with this attribute should be placed in a specific section of memory during the linking process.
+* It is a special type of memory;CCM is designed to provide fast, low-latency access to memory for critical system tasks, 
+particularly those related to real-time processing.
+* Other memory regions:- Flash memory, RAM, External Memory Interfaces(EMI), Pheripheral Memory regions
+*/
 
 #define TASK1_STACK_SIZE 256
 StackType_t Task1Stack[TASK1_STACK_SIZE] CCM_RAM;
@@ -47,7 +51,8 @@ NVIC_PriorityGroup_4 indicates that the priority grouping will be configured wit
 /*
 xTaskCreateStatic(task_func, User_def_name, StackSize, Parameters, priority, Pointer_to_stack, pointer_to_TCB)
    
-If a task is created using xTaskCreate() then the required RAM is automatically allocated from the FreeRTOS heap. If a task is created using xTaskCreateStatic() then the RAM is provided by the application writer,
+If a task is created using xTaskCreate() then the required RAM is automatically allocated from the FreeRTOS heap. 
+If a task is created using xTaskCreateStatic() then the RAM is provided by the application writer,
   
 Stack and TCB are placed in CCM of STM32F4.The CCM block is connected directly to the core, which leads to zero wait states
 */  
@@ -64,7 +69,8 @@ Stack and TCB are placed in CCM of STM32F4.The CCM block is connected directly t
 void vApplicationTickHook(void) {
 }
 /*
-The purpose of vApplicationTickHook() is to allow user-defined code to be executed at each tick of the RTOS tick timer. You can use this hook function to perform periodic tasks, monitor system activity, or synchronize with external events.
+The purpose of vApplicationTickHook() is to allow user-defined code to be executed at each tick of the RTOS tick timer. 
+You can use this hook function to perform periodic tasks, monitor system activity, or synchronize with external events.
 */
 
 
@@ -76,9 +82,12 @@ void vApplicationMallocFailedHook(void) {
   for(;;);
 }
 /*
-vApplicationMallocFailedHook() will only be called if configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.It is a hook function that will get called if a call to pvPortMalloc() fails.
+vApplicationMallocFailedHook() will only be called if configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.
+It is a hook function that will get called if a call to pvPortMalloc() fails.
 
-pvPortMalloc() is called internally by the kernel whenever a task, queue,timer or semaphore is created.  It is also called by various parts of the demo application.If heap_1.c or heap_2.c are used, then the size of the heap available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE in FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used to query the size of free heap space that remains (although it does not provide information on how the remaining heap might be fragmented). 
+pvPortMalloc() is called internally by the kernel whenever a task, queue,timer or semaphore is created. 
+ It is also called by various parts of the demo application.If heap_1.c or heap_2.c are used, then the size of the heap available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE in FreeRTOSConfig.h, 
+ and the xPortGetFreeHeapSize() API function can be used to query the size of free heap space that remains (although it does not provide information on how the remaining heap might be fragmented). 
 */
 
 
@@ -90,9 +99,11 @@ void vApplicationIdleHook(void)
 /* 
 vApplicationIdleHook() will only be called if configUSE_IDLE_HOOK is set to 1 in FreeRTOSConfig.h. 
 
-It will be called on each iteration of the idle task. It is essential that code added to this hook function never attempts to block in any way (for example, call xQueueReceive() with a block time specified, or call vTaskDelay()). 
+It will be called on each iteration of the idle task. It is essential that code added to this hook function never attempts to block in any way 
+(for example, call xQueueReceive() with a block time specified, or call vTaskDelay()). 
  
-If the application makes use of the vTaskDelete() API function (as this demo application does) then it is also important that vApplicationIdleHook() is permitted to return to its calling function, because it is the responsibility of the idle task to clean up memory allocated by the kernel to any task that has since been deleted. 
+If the application makes use of the vTaskDelete() API function (as this demo application does) then it is also important that vApplicationIdleHook() is permitted to return to its calling function, 
+because it is the responsibility of the idle task to clean up memory allocated by the kernel to any task that has since been deleted. 
 */
  
  
@@ -132,7 +143,8 @@ void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackTyp
 
 }
 /* 
-configUSE_STATIC_ALLOCATION is set to 1, so the application must provide an implementation of vApplicationGetIdleTaskMemory() to provide the memory that is used by the Idle task. 
+configUSE_STATIC_ALLOCATION is set to 1, so the application must provide an implementation of 
+vApplicationGetIdleTaskMemory() to provide the memory that is used by the Idle task. 
 */
 
 
