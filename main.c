@@ -18,7 +18,7 @@ particularly those related to real-time processing.
 * Other memory regions:- Flash memory, RAM, External Memory Interfaces(EMI), Pheripheral Memory regions
 */
 
-#define TASK1_STACK_SIZE 256
+#define TASK1_STACK_SIZE 50
 StackType_t Task1Stack[TASK1_STACK_SIZE] CCM_RAM;
 // Declares an array named Task1Stack of type StackType_t  
 // Put task stack in CCM
@@ -26,7 +26,7 @@ StackType_t Task1Stack[TASK1_STACK_SIZE] CCM_RAM;
 StaticTask_t Task1Buffer CCM_RAM;  
 // Put TCB in CCM
 
-#define TASK2_STACK_SIZE 256
+#define TASK2_STACK_SIZE 50
 StackType_t Task2Stack[TASK2_STACK_SIZE] CCM_RAM;
 // Declares an array named fpuTaskStack of type StackType_t  
 // Put task stack in CCM

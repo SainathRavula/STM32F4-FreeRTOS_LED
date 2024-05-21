@@ -15,7 +15,7 @@ SRCROOT 	 = $(CURDIR)
 
 FREERTOS	:= $(SRCROOT)/FreeRTOS
 STARTUP	:= $(SRCROOT)/hardware
-LINKER_SCRIPT	:= $(SRCROOT)/Utilities/stm32_flash.ld #####
+LINKER_SCRIPT	:= $(SRCROOT)/Utilities/STM32F411VETx_FLASH.ld
 
 INCLUDE	+= -I$(SRCROOT)/hardware
 INCLUDE	+= -I$(FREERTOS)/include
