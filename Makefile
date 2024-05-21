@@ -90,7 +90,6 @@ SRC		+= misc.c
 #SRC		+= stm32f4xx_ltdc.c
 #SRC		+= stm32f4xx_tim.c
 #SRC		+= stm32f4xx_cryp_des.c
-#SRC		+= stm32f4xx_fmc.c
 #SRC		+= stm32f4xx_pwr.c
 #SRC		+= stm32f4xx_cryp_tdes.c
 #SRC		+= stm32f4xx_fmpi2c.c
@@ -157,12 +156,12 @@ LDFLAGS 	+= -Wl,-Map=$(BIN_DIR)/$(TARGET).map
 
 
 CC		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-gcc
-#Compiler Command s responsible for compiling C source files (*.c) into object files (*.o). 
+#Compiler Commands responsible for compiling C source files (*.c) into object files (*.o). 
 #It translates C code into machine code specific to the target architecture.
 
 LD		 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-ld
 #Linker Command links together multiple object files and libraries to create the final executable file.
-#It resolves symbols and addresses, organizes memory layout, and generates the executable binary.
+#It resolves symbols and addresses, organizes memory layout, and generates the executable file.
 
 OBJCOPY 	 = $(TOOLCHAIN_PATH)/$(TOOLCHAIN_PREFIX)-objcopy
 #Object File Copy Command copies object files and can be used to convert the format of object files. 
