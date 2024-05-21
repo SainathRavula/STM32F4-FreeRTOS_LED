@@ -5,6 +5,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "stdio.h"
+#include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h" // Include GPIO library
 
 #define CCM_RAM __attribute__((section(".ccmram")))
@@ -187,6 +188,7 @@ void init_GPIO(void)
 	GPIOD->OSPEEDR |= 0xFF000000;
 	*/
 	GPIO_InitTypeDef GPIO_InitStruct;
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 	
 	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_14;
  	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
