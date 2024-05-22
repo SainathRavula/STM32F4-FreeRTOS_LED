@@ -42,13 +42,14 @@ void vTask2_Green(void *pvParameters);
 //=========================================================Main Function===================================================================
 int main(void) 
 {
-        NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+	SystemInit();     
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 /*
 This is a function provided by the CMSIS library.It is used to  configure the priority grouping of the NVIC.
   
 NVIC_PriorityGroup_4 indicates that the priority grouping will be configured with 4 bits for preemption priority and 0 bits for subpriority.
 */
-
+	printf("Hello\n");
       	init_GPIO();
  	xTaskCreateStatic(vTask1_Red, "RED LED", TASK1_STACK_SIZE, NULL, 1, Task1Stack, &Task1Buffer);
 	xTaskCreateStatic(vTask2_Green, "Green LED", TASK2_STACK_SIZE, NULL, 1, Task2Stack, &Task2Buffer);
