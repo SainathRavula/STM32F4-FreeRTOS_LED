@@ -2,6 +2,7 @@
 https://github.com/wangyeee/STM32F4-FreeRTOS
 https://github.com/stlink-org/stlink?tab=readme-ov-file
 https://github.com/espruino/Espruino/blob/master/targetlibs/stm32f4/lib/stm32f411xe.h (For driver and header files of stm32f4)
+https://askubuntu.com/questions/1243252/how-to-install-arm-none-eabi-gdb-on-ubuntu-20-04-lts-focal-fossa (For installing toolchain)
 blue board-->stm32f411e (MB1115D)
 green board-->stm32f411e (Mb1115B)
 ================================================================================================
