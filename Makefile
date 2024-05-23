@@ -110,7 +110,7 @@ CDEFS		+= -DARM_MATH_CM4
 
 MCUFLAGS 	+= -mcpu=cortex-m4
 #Specifies the target processor architecture as ARM Cortex-M4
-MCUFLAGS 	+= -mthumb
+#MCUFLAGS 	+= -mthumb
 #Enables Thumb mode,  a more code-efficient instruction set for ARM processors.
 
 MCUFLAGS 	+= -mfloat-abi=hard
