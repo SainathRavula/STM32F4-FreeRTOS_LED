@@ -1,7 +1,5 @@
-This repository contains demo project of porting FreeRtos to STM32F4 by linux using Makefile.(STM32F417).
-
-This repo is modification of repo STM32F4-FreeRTOS to blink LED's on STM32F411E Discovery.
-
+This repository contains demo project of porting FreeRtos to STM32F4 by linux using Makefile.(STM32F411E).
+Implementation of blinking red and green LEDs on board.
 -->Refering these link
 
 https://github.com/wangyeee/STM32F4-FreeRTOS
@@ -15,13 +13,12 @@ Setting up the Work Bench
 
 -->Refering these link
 https://github.com/wangyeee/STM32F4-FreeRTOS
+https://github.com/stlink-org/stlink/releases
+https://github.com/espruino/Espruino/tree/master/targetlibs/stm32f4/lib
 
 blue board-->stm32f411e (MB1115D)
 
 green board-->stm32f411e (Mb1115B)
-
-Setting up the Work Bench 
-===========================
 
 Toolchain for arm processors
 ============================
@@ -39,7 +36,7 @@ specifically for ARM Cortex-M and Cortex-R processors.
 
 -standard GCC compiler on our system doesn't recognize ARM-specific instructions or peripheral registers,so errors will be produced.
 
- Follow youtube video "https://www.youtube.com/watch?v=imUiQkO9YHM from 2:21 to 7:55".
+== Follow youtube video "https://www.youtube.com/watch?v=imUiQkO9YHM from 2:21 to 7:55".
  
  -Upgrade and update apt-get packages using "sudo apt-get update" and "sudo apt-get upgrade"
  
@@ -295,7 +292,7 @@ size: 29796
 
 -->GDB Debugger
 
--Now to debug and observe the output ,chat gpt recommended to use GDB server to debug and maxicon(?) to observe the output of the written code i.e usart code.
+-Now to debug and observe the output ,It is recommended to use GDB server to debug and GTKTerm to observe the output if any print statements in the written code(Direct printf doesn't work we need to configure usart).
 
 -To connect to GDB server -->"sudo st-util"
 
@@ -372,4 +369,29 @@ prvGetRegistersFromStack (pulFaultStackAddress=0x2001ffd8)
 
 *Refer GDB Cheet in DiscoSetup/ for more debugging commands
 
+Observing output
+================
 
+To observe the print statements written in code, we will use GTKTerm serial window
+
+-We cannot use printf in main file, we have send data using USART function USART_SendData
+-Install GTKTerm directly from terminal "sudo apt install gtkterm"
+-open the GTKTerm application and set the configurations
+	-Select port as /dev/ttyUSB0.
+	-Baud rate is usually 9600 or 115200 but in this case it is working with 1200 and 600.
+	-Parity as none.
+	-Bits as 8.
+	-StopBits as 1.
+	-Flow Control as none.
+-In terminal we need to give permission for ttyUSB0 "sudo chmod 777 /dev/ttyUSB0"
+-RS232 cable will have 6 wires.
+	-Yellow -> RX
+	-Orange -> TX
+	-Black -> gnd
+	-Red -> 3.3v
+	-Brown -> CTS#
+	-RTS -> RTS#
+-Connect Rx of RS232 cable to Tx pin on board and viceversa.
+-We are using USART1 so PA9->Tx and PA10->Rx.
+
+	
