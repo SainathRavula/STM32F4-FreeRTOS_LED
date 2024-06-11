@@ -413,79 +413,6 @@ Discarded input sections
                 0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/misc.o
  .text.SysTick_CLKSourceConfig
                 0x0000000000000000       0x18 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/misc.o
- .text          0x0000000000000000        0x0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .data          0x0000000000000000        0x0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .bss           0x0000000000000000        0x0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_DeInit
-                0x0000000000000000      0x10c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_Init
-                0x0000000000000000       0xc4 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_StructInit
-                0x0000000000000000       0x14 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ClockInit
-                0x0000000000000000       0x2c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ClockStructInit
-                0x0000000000000000        0x8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_Cmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SetPrescaler
-                0x0000000000000000       0x14 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_OverSampling8Cmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_OneBitMethodCmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SendData
-                0x0000000000000000        0x8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ReceiveData
-                0x0000000000000000        0x8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SetAddress
-                0x0000000000000000       0x18 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ReceiverWakeUpCmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_WakeUpConfig
-                0x0000000000000000       0x18 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_LINBreakDetectLengthConfig
-                0x0000000000000000       0x18 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_LINCmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SendBreak
-                0x0000000000000000        0xc /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_HalfDuplexCmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SetGuardTime
-                0x0000000000000000       0x14 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SmartCardCmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_SmartCardNACKCmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_IrDAConfig
-                0x0000000000000000       0x18 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_IrDACmd
-                0x0000000000000000       0x1c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_DMACmd
-                0x0000000000000000       0x14 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ITConfig
-                0x0000000000000000       0x34 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_GetFlagStatus
-                0x0000000000000000        0xc /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ClearFlag
-                0x0000000000000000        0x8 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_GetITStatus
-                0x0000000000000000       0x44 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .text.USART_ClearITPendingBit
-                0x0000000000000000       0x10 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_info    0x0000000000000000      0xc9c /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_abbrev  0x0000000000000000      0x1eb /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_loc     0x0000000000000000      0x8e5 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_aranges
-                0x0000000000000000      0x100 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_ranges  0x0000000000000000       0xf0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_line    0x0000000000000000      0x9db /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_str     0x0000000000000000      0x740 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .comment       0x0000000000000000       0x4a /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .debug_frame   0x0000000000000000      0x244 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
- .ARM.attributes
-                0x0000000000000000       0x34 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
  .text          0x0000000000000000       0x14 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
  .data          0x0000000000000000        0x0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
  .bss           0x0000000000000000        0x0 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
@@ -603,7 +530,6 @@ LOAD /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/heap_4
 LOAD /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_rcc.o
 LOAD /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_gpio.o
 LOAD /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/misc.o
-LOAD /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/stm32f4xx_usart.o
 LOAD /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
 LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
 LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
