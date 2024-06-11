@@ -4,7 +4,6 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-void vApplicationIdleHook(void) {}
 static void setup_hardware(void);
 void simple_task(void* pvParameters);
 void init_LED(void);
@@ -16,6 +15,11 @@ int main(void)
 	xTaskCreate(simple_task, "Simple Task", 128, NULL, 2, NULL);
   	vTaskStartScheduler();
   	for (;;);
+}
+
+void vApplicationIdleHook(void) 
+{
+	//Idle Task	
 }
 
 void vApplicationStackOverflowHook(TaskHandle_t xTask, char* pcTaskName) 
@@ -34,6 +38,7 @@ static void setup_hardware(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 }
 
+
 void vApplicationGetIdleTaskMemory(StaticTask_t** ppxIdleTaskTCBBuffer, StackType_t** ppxIdleTaskStackBuffer, uint32_t* pulIdleTaskStackSize) 
 {
 	static StaticTask_t xIdleTaskTCB;
@@ -45,6 +50,7 @@ void vApplicationGetIdleTaskMemory(StaticTask_t** ppxIdleTaskTCBBuffer, StackTyp
 }
 static StaticTask_t xTimerTaskTCB;
 static StackType_t uxTimerTaskStack[configTIMER_TASK_STACK_DEPTH];
+
 
 void vApplicationGetTimerTaskMemory(StaticTask_t** ppxTimerTaskTCBBuffer, StackType_t** ppxTimerTaskStackBuffer, uint32_t* pulTimerTaskStackSize) 
 {
@@ -58,8 +64,9 @@ void simple_task(void* pvParameters)
 	
 	for (;;) 
 	{
+		printf("LED on\n");
 		GPIO_ToggleBits(GPIOD, GPIO_Pin_14 | GPIO_Pin_12);
-		vTaskDelay(1000 / portTICK_RATE_MS);
+		vTaskDelay(500);
   	}
 
 	vTaskDelete(NULL);
