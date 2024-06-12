@@ -64,7 +64,6 @@ void simple_task(void* pvParameters)
 	
 	for (;;) 
 	{
-		printf("LED on\n");
 		GPIO_ToggleBits(GPIOD, GPIO_Pin_14 | GPIO_Pin_12);
 		vTaskDelay(500);
   	}
