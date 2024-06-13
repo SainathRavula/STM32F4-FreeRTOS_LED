@@ -510,6 +510,7 @@ Memory Configuration
 Name             Origin             Length             Attributes
 FLASH            0x0000000008000000 0x0000000000080000 xr
 RAM              0x0000000020000000 0x0000000000020000 xrw
+CCMRAM           0x0000000010000000 0x0000000000010000 rw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -551,7 +552,7 @@ LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000188                . = ALIGN (0x4)
 
-.text           0x0000000008000190     0x247c
+.text           0x0000000008000190     0x2494
                 0x0000000008000190                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000190       0x40 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -749,188 +750,188 @@ LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
                 0x00000000080023c8       0x14 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/misc.o
                 0x00000000080023c8                NVIC_PriorityGroupConfig
  .text.Reset_Handler
-                0x00000000080023dc       0x48 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
+                0x00000000080023dc       0x60 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
                 0x00000000080023dc                Reset_Handler
  .text.Default_Handler
-                0x0000000008002424        0x2 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
-                0x0000000008002424                RTC_Alarm_IRQHandler
-                0x0000000008002424                HASH_RNG_IRQHandler
-                0x0000000008002424                EXTI2_IRQHandler
-                0x0000000008002424                TIM8_CC_IRQHandler
-                0x0000000008002424                TIM1_CC_IRQHandler
-                0x0000000008002424                DMA2_Stream5_IRQHandler
-                0x0000000008002424                DMA1_Stream5_IRQHandler
-                0x0000000008002424                PVD_IRQHandler
-                0x0000000008002424                SDIO_IRQHandler
-                0x0000000008002424                TAMP_STAMP_IRQHandler
-                0x0000000008002424                CAN2_RX1_IRQHandler
-                0x0000000008002424                EXTI3_IRQHandler
-                0x0000000008002424                TIM8_TRG_COM_TIM14_IRQHandler
-                0x0000000008002424                TIM1_UP_TIM10_IRQHandler
-                0x0000000008002424                TIM8_UP_TIM13_IRQHandler
-                0x0000000008002424                I2C3_ER_IRQHandler
-                0x0000000008002424                EXTI0_IRQHandler
-                0x0000000008002424                I2C2_EV_IRQHandler
-                0x0000000008002424                DMA1_Stream2_IRQHandler
-                0x0000000008002424                CAN1_RX0_IRQHandler
-                0x0000000008002424                FPU_IRQHandler
-                0x0000000008002424                OTG_HS_WKUP_IRQHandler
-                0x0000000008002424                CAN2_SCE_IRQHandler
-                0x0000000008002424                DMA2_Stream2_IRQHandler
-                0x0000000008002424                SPI1_IRQHandler
-                0x0000000008002424                TIM6_DAC_IRQHandler
-                0x0000000008002424                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008002424                DCMI_IRQHandler
-                0x0000000008002424                CAN2_RX0_IRQHandler
-                0x0000000008002424                DMA2_Stream3_IRQHandler
-                0x0000000008002424                USART6_IRQHandler
-                0x0000000008002424                USART3_IRQHandler
-                0x0000000008002424                CRYP_IRQHandler
-                0x0000000008002424                CAN1_RX1_IRQHandler
-                0x0000000008002424                UART5_IRQHandler
-                0x0000000008002424                DMA2_Stream0_IRQHandler
-                0x0000000008002424                TIM4_IRQHandler
-                0x0000000008002424                I2C1_EV_IRQHandler
-                0x0000000008002424                DMA1_Stream6_IRQHandler
-                0x0000000008002424                DMA1_Stream1_IRQHandler
-                0x0000000008002424                UART4_IRQHandler
-                0x0000000008002424                TIM3_IRQHandler
-                0x0000000008002424                RCC_IRQHandler
-                0x0000000008002424                TIM8_BRK_TIM12_IRQHandler
-                0x0000000008002424                Default_Handler
-                0x0000000008002424                EXTI15_10_IRQHandler
-                0x0000000008002424                ADC_IRQHandler
-                0x0000000008002424                DMA1_Stream7_IRQHandler
-                0x0000000008002424                TIM7_IRQHandler
-                0x0000000008002424                CAN2_TX_IRQHandler
-                0x0000000008002424                TIM5_IRQHandler
-                0x0000000008002424                DMA2_Stream7_IRQHandler
-                0x0000000008002424                I2C3_EV_IRQHandler
-                0x0000000008002424                EXTI9_5_IRQHandler
-                0x0000000008002424                RTC_WKUP_IRQHandler
-                0x0000000008002424                ETH_WKUP_IRQHandler
-                0x0000000008002424                SPI2_IRQHandler
-                0x0000000008002424                OTG_HS_EP1_IN_IRQHandler
-                0x0000000008002424                DMA1_Stream0_IRQHandler
-                0x0000000008002424                CAN1_TX_IRQHandler
-                0x0000000008002424                EXTI4_IRQHandler
-                0x0000000008002424                FSMC_IRQHandler
-                0x0000000008002424                ETH_IRQHandler
-                0x0000000008002424                OTG_HS_EP1_OUT_IRQHandler
-                0x0000000008002424                WWDG_IRQHandler
-                0x0000000008002424                TIM2_IRQHandler
-                0x0000000008002424                OTG_FS_WKUP_IRQHandler
-                0x0000000008002424                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008002424                OTG_HS_IRQHandler
-                0x0000000008002424                EXTI1_IRQHandler
-                0x0000000008002424                USART2_IRQHandler
-                0x0000000008002424                I2C2_ER_IRQHandler
-                0x0000000008002424                DMA2_Stream1_IRQHandler
-                0x0000000008002424                CAN1_SCE_IRQHandler
-                0x0000000008002424                FLASH_IRQHandler
-                0x0000000008002424                DMA2_Stream4_IRQHandler
-                0x0000000008002424                USART1_IRQHandler
-                0x0000000008002424                OTG_FS_IRQHandler
-                0x0000000008002424                SPI3_IRQHandler
-                0x0000000008002424                DMA1_Stream4_IRQHandler
-                0x0000000008002424                I2C1_ER_IRQHandler
-                0x0000000008002424                DMA2_Stream6_IRQHandler
-                0x0000000008002424                DMA1_Stream3_IRQHandler
- *fill*         0x0000000008002426        0x2 
+                0x000000000800243c        0x2 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/startup_stm32f4xx.o
+                0x000000000800243c                RTC_Alarm_IRQHandler
+                0x000000000800243c                HASH_RNG_IRQHandler
+                0x000000000800243c                EXTI2_IRQHandler
+                0x000000000800243c                TIM8_CC_IRQHandler
+                0x000000000800243c                TIM1_CC_IRQHandler
+                0x000000000800243c                DMA2_Stream5_IRQHandler
+                0x000000000800243c                DMA1_Stream5_IRQHandler
+                0x000000000800243c                PVD_IRQHandler
+                0x000000000800243c                SDIO_IRQHandler
+                0x000000000800243c                TAMP_STAMP_IRQHandler
+                0x000000000800243c                CAN2_RX1_IRQHandler
+                0x000000000800243c                EXTI3_IRQHandler
+                0x000000000800243c                TIM8_TRG_COM_TIM14_IRQHandler
+                0x000000000800243c                TIM1_UP_TIM10_IRQHandler
+                0x000000000800243c                TIM8_UP_TIM13_IRQHandler
+                0x000000000800243c                I2C3_ER_IRQHandler
+                0x000000000800243c                EXTI0_IRQHandler
+                0x000000000800243c                I2C2_EV_IRQHandler
+                0x000000000800243c                DMA1_Stream2_IRQHandler
+                0x000000000800243c                CAN1_RX0_IRQHandler
+                0x000000000800243c                FPU_IRQHandler
+                0x000000000800243c                OTG_HS_WKUP_IRQHandler
+                0x000000000800243c                CAN2_SCE_IRQHandler
+                0x000000000800243c                DMA2_Stream2_IRQHandler
+                0x000000000800243c                SPI1_IRQHandler
+                0x000000000800243c                TIM6_DAC_IRQHandler
+                0x000000000800243c                TIM1_BRK_TIM9_IRQHandler
+                0x000000000800243c                DCMI_IRQHandler
+                0x000000000800243c                CAN2_RX0_IRQHandler
+                0x000000000800243c                DMA2_Stream3_IRQHandler
+                0x000000000800243c                USART6_IRQHandler
+                0x000000000800243c                USART3_IRQHandler
+                0x000000000800243c                CRYP_IRQHandler
+                0x000000000800243c                CAN1_RX1_IRQHandler
+                0x000000000800243c                UART5_IRQHandler
+                0x000000000800243c                DMA2_Stream0_IRQHandler
+                0x000000000800243c                TIM4_IRQHandler
+                0x000000000800243c                I2C1_EV_IRQHandler
+                0x000000000800243c                DMA1_Stream6_IRQHandler
+                0x000000000800243c                DMA1_Stream1_IRQHandler
+                0x000000000800243c                UART4_IRQHandler
+                0x000000000800243c                TIM3_IRQHandler
+                0x000000000800243c                RCC_IRQHandler
+                0x000000000800243c                TIM8_BRK_TIM12_IRQHandler
+                0x000000000800243c                Default_Handler
+                0x000000000800243c                EXTI15_10_IRQHandler
+                0x000000000800243c                ADC_IRQHandler
+                0x000000000800243c                DMA1_Stream7_IRQHandler
+                0x000000000800243c                TIM7_IRQHandler
+                0x000000000800243c                CAN2_TX_IRQHandler
+                0x000000000800243c                TIM5_IRQHandler
+                0x000000000800243c                DMA2_Stream7_IRQHandler
+                0x000000000800243c                I2C3_EV_IRQHandler
+                0x000000000800243c                EXTI9_5_IRQHandler
+                0x000000000800243c                RTC_WKUP_IRQHandler
+                0x000000000800243c                ETH_WKUP_IRQHandler
+                0x000000000800243c                SPI2_IRQHandler
+                0x000000000800243c                OTG_HS_EP1_IN_IRQHandler
+                0x000000000800243c                DMA1_Stream0_IRQHandler
+                0x000000000800243c                CAN1_TX_IRQHandler
+                0x000000000800243c                EXTI4_IRQHandler
+                0x000000000800243c                FSMC_IRQHandler
+                0x000000000800243c                ETH_IRQHandler
+                0x000000000800243c                OTG_HS_EP1_OUT_IRQHandler
+                0x000000000800243c                WWDG_IRQHandler
+                0x000000000800243c                TIM2_IRQHandler
+                0x000000000800243c                OTG_FS_WKUP_IRQHandler
+                0x000000000800243c                TIM1_TRG_COM_TIM11_IRQHandler
+                0x000000000800243c                OTG_HS_IRQHandler
+                0x000000000800243c                EXTI1_IRQHandler
+                0x000000000800243c                USART2_IRQHandler
+                0x000000000800243c                I2C2_ER_IRQHandler
+                0x000000000800243c                DMA2_Stream1_IRQHandler
+                0x000000000800243c                CAN1_SCE_IRQHandler
+                0x000000000800243c                FLASH_IRQHandler
+                0x000000000800243c                DMA2_Stream4_IRQHandler
+                0x000000000800243c                USART1_IRQHandler
+                0x000000000800243c                OTG_FS_IRQHandler
+                0x000000000800243c                SPI3_IRQHandler
+                0x000000000800243c                DMA1_Stream4_IRQHandler
+                0x000000000800243c                I2C1_ER_IRQHandler
+                0x000000000800243c                DMA2_Stream6_IRQHandler
+                0x000000000800243c                DMA1_Stream3_IRQHandler
+ *fill*         0x000000000800243e        0x2 
  .text.__libc_init_array
-                0x0000000008002428       0x48 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
-                0x0000000008002428                __libc_init_array
- .text.memset   0x0000000008002470       0xa4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-memset.o)
-                0x0000000008002470                memset
+                0x0000000008002440       0x48 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+                0x0000000008002440                __libc_init_array
+ .text.memset   0x0000000008002488       0xa4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-memset.o)
+                0x0000000008002488                memset
  .text.startup.register_fini
-                0x0000000008002514       0x14 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x0000000008002528        0xc /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
-                0x0000000008002528                atexit
+                0x000000000800252c       0x14 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008002540        0xc /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
+                0x0000000008002540                atexit
  .text.__libc_fini_array
-                0x0000000008002534       0x2c /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
-                0x0000000008002534                __libc_fini_array
+                0x000000000800254c       0x2c /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
+                0x000000000800254c                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x0000000008002560        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-lock.o)
-                0x0000000008002560                __retarget_lock_acquire_recursive
+                0x0000000008002578        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-lock.o)
+                0x0000000008002578                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008002564        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-lock.o)
-                0x0000000008002564                __retarget_lock_release_recursive
+                0x000000000800257c        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-lock.o)
+                0x000000000800257c                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x0000000008002568       0x8c /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
-                0x0000000008002568                __register_exitproc
+                0x0000000008002580       0x8c /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
+                0x0000000008002580                __register_exitproc
  *(.glue_7)
- .glue_7        0x00000000080025f4        0x0 linker stubs
+ .glue_7        0x000000000800260c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080025f4        0x0 linker stubs
+ .glue_7t       0x000000000800260c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00000000080025f4        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x000000000800260c        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x00000000080025f4        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x00000000080025f4                _init
- .init          0x00000000080025f8        0x8 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x000000000800260c        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x000000000800260c                _init
+ .init          0x0000000008002610        0x8 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0000000008002600        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008002600                _fini
- .fini          0x0000000008002604        0x8 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x000000000800260c                . = ALIGN (0x4)
-                0x000000000800260c                _etext = .
+ .fini          0x0000000008002618        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000008002618                _fini
+ .fini          0x000000000800261c        0x8 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000000008002624                . = ALIGN (0x4)
+                0x0000000008002624                _etext = .
 
-.vfp11_veneer   0x000000000800260c        0x0
- .vfp11_veneer  0x000000000800260c        0x0 linker stubs
+.vfp11_veneer   0x0000000008002624        0x0
+ .vfp11_veneer  0x0000000008002624        0x0 linker stubs
 
-.v4_bx          0x000000000800260c        0x0
- .v4_bx         0x000000000800260c        0x0 linker stubs
+.v4_bx          0x0000000008002624        0x0
+ .v4_bx         0x0000000008002624        0x0 linker stubs
 
-.iplt           0x000000000800260c        0x0
- .iplt          0x000000000800260c        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0000000008002624        0x0
+ .iplt          0x0000000008002624        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x000000000800260c       0x20
-                0x000000000800260c                . = ALIGN (0x4)
+.rodata         0x0000000008002624       0x20
+                0x0000000008002624                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.main.str1.4
-                0x000000000800260c        0xc /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/main.o
+                0x0000000008002624        0xc /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/main.o
  .rodata.xTimerCreateTimerTask.str1.4
-                0x0000000008002618       0x10 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/timers.o
+                0x0000000008002630       0x10 /home/vlab/FreeRTOS_Work/STM32F4_Firmware/STM32F4-FreeRTOS_LED/build/timers.o
  .rodata._global_impure_ptr
-                0x0000000008002628        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
-                0x0000000008002628                _global_impure_ptr
-                0x000000000800262c                . = ALIGN (0x4)
+                0x0000000008002640        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
+                0x0000000008002640                _global_impure_ptr
+                0x0000000008002644                . = ALIGN (0x4)
 
-.rel.dyn        0x000000000800262c        0x0
- .rel.iplt      0x000000000800262c        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0000000008002644        0x0
+ .rel.iplt      0x0000000008002644        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000800262c        0x0
-                0x000000000800262c                __exidx_start = .
+.ARM            0x0000000008002644        0x0
+                0x0000000008002644                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000800262c                __exidx_end = .
+                0x0000000008002644                __exidx_end = .
 
-.preinit_array  0x000000000800262c        0x0
-                0x000000000800262c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008002644        0x0
+                0x0000000008002644                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000800262c                PROVIDE (__preinit_array_end = .)
+                0x0000000008002644                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000000800262c        0x8
-                0x000000000800262c                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008002644        0x8
+                0x0000000008002644                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x000000000800262c        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
+                0x0000000008002644        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008002630        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0000000008002634                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008002648        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x000000000800264c                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008002634        0x4
-                0x0000000008002634                PROVIDE (__fini_array_start = .)
+.fini_array     0x000000000800264c        0x4
+                0x000000000800264c                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008002634        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0000000008002638                PROVIDE (__fini_array_end = .)
-                0x0000000008002638                _sidata = LOADADDR (.data)
+ .fini_array    0x000000000800264c        0x4 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000008002650                PROVIDE (__fini_array_end = .)
+                0x0000000008002650                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x434 load address 0x0000000008002638
+.data           0x0000000020000000      0x434 load address 0x0000000008002650
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -947,12 +948,21 @@ LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
                 0x0000000020000430                __atexit_recursive_mutex
                 0x0000000020000434                . = ALIGN (0x4)
                 0x0000000020000434                _edata = .
+                0x0000000008002a84                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x0000000020000434        0x0 load address 0x0000000008002a6c
+.igot.plt       0x0000000020000434        0x0 load address 0x0000000008002a84
  .igot.plt      0x0000000020000434        0x0 /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x0000000020000434                . = ALIGN (0x4)
 
-.bss            0x0000000020000438    0x12dc4 load address 0x0000000008002a6c
+.ccmram         0x0000000010000000        0x0 load address 0x0000000008002a84
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _sccmram = .
+ *(.ccmram)
+ *(.ccmram*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _eccmram = .
+                0x0000000010000000                . = ALIGN (0x4)
+
+.bss            0x0000000020000438    0x12dc4
                 0x0000000020000438                _sbss = .
                 0x0000000020000438                __bss_start__ = _sbss
  *(.bss)
@@ -1043,7 +1053,7 @@ LOAD /opt/gcc-arm/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
                 0x00000000200131fc                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200131fc      0x604 load address 0x0000000008002a6c
+                0x00000000200131fc      0x604
                 0x0000000020013200                . = ALIGN (0x8)
  *fill*         0x00000000200131fc        0x4 
                 0x0000000020013200                PROVIDE (end = .)
