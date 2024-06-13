@@ -187,6 +187,7 @@ ASM_OBJ	 = $(ASRC:%.s=$(BUILD_DIR)/%.o)
 
 #$< :- name of dependency; $@ :- name of target 
 $(BUILD_DIR)/%.o: %.c
+	@mkdir -p $(BUILD_DIR)
 	@echo [CC] $(notdir $<)
 	@$(CC) $(CFLAGS) $< -c -o $@
 
@@ -197,7 +198,7 @@ all: $(OBJ)
 	@echo [AS] $(ASRC)
 	@$(AS) -o $(ASM_OBJ) $(STARTUP)/$(ASRC)
 #arm-none-eabi-gcc-as -o startup_stm32f4xx.o startup_stm32f4xx.s 
-	
+	@mkdir -p $(BIN_DIR)
 	@echo [LD] $(TARGET).elf
 	@$(CC) -o $(BIN_DIR)/$(TARGET).elf $(LDFLAGS) $(OBJ) $(ASM_OBJ) $(LDLIBS)
 #arm-none-eabi-gcc -o FreeRTOS.elf file1.o file2.o ....
